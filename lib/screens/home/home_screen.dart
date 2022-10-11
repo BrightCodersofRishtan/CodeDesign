@@ -1,6 +1,9 @@
+import 'dart:html';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:storeapp/model/category_model.dart';
+import 'package:storeapp/model/models.dart';
 import 'package:storeapp/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,17 +27,24 @@ class HomeScreen extends StatelessWidget {
       // 2.CustomNavBar
       bottomNavigationBar: CustomNavBar(),
 
-      body: Container(
-        child: CarouselSlider(
-            options: CarouselOptions(
-              aspectRatio: 1.5,
-              viewportFraction: 0.9,
-              enlargeCenterPage: true,
-              enlargeStrategy: CenterPageEnlargeStrategy.height,
-            ),
-            items: Category.categories
-                .map((category) => HeroCaruselCard(category: category))
-                .toList()),
+      body: Column(
+        children: [
+          Container(
+            child: CarouselSlider(
+                options: CarouselOptions(
+                  aspectRatio: 1.5,
+                  viewportFraction: 0.9,
+                  enlargeCenterPage: true,
+                  enlargeStrategy: CenterPageEnlargeStrategy.height,
+                ),
+                items: Category.categories
+                    .map((category) => HeroCaruselCard(category: category))
+                    .toList()),
+          ),
+          SectionTitle(title: "RECOMMENDED"),
+          // Product Card
+          ProductCard(product: Product.products[0],),
+        ],
       ),
     );
   }
