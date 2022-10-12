@@ -6,8 +6,8 @@ class CatalogScreen extends StatelessWidget {
 
   static Route route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: routeName),
-      builder: (_) => CatalogScreen(),
+      settings: const RouteSettings(name: routeName),
+      builder: (_) => const CatalogScreen(),
     );
   }
 
@@ -15,7 +15,7 @@ class CatalogScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       // 1.CustomAppBar
       appBar: CustomAppBar(title: "FullFlutter.uz"),
 

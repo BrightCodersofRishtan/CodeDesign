@@ -6,8 +6,8 @@ class CartScreen extends StatelessWidget {
 
   static Route route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: routeName),
-      builder: (_) => CartScreen(),
+      settings: const RouteSettings(name: routeName),
+      builder: (_) => const CartScreen(),
     );
   }
 
@@ -15,7 +15,8 @@ class CartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    
+    return const Scaffold(
       // 1.CustomAppBar
       appBar: CustomAppBar(title: "Cart Screen"),
 

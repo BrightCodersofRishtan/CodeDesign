@@ -28,7 +28,7 @@ class Product extends Equatable {
         ];
 
   static List<Product> products = [
-    Product(
+    const Product(
       name: "Soft Drink #1",
       category: 'Soft Drink',
       imageUrl: 'https://avatars.mds.yandex.net/i?id=e330f7491ebdc4918406e8c20079c532-5680887-images-thumbs&n=13&exp=1',
@@ -36,7 +36,7 @@ class Product extends Equatable {
       isRecommended: false,
       isPopular: true,
       ),
-    Product(
+    const Product(
       name: "Soft Drink #2",
       category: 'Soft Drink',
       imageUrl: 'https://www.puremalt.com/hs-fs/hubfs/Website%20Resources/Media/Soft%20drinks%20and%20NA%20beverage/Assorted%20Soft%20Drinks%20-%20rendered.jpg?width=1920&name=Assorted%20Soft%20Drinks%20-%20rendered.jpg',
@@ -44,7 +44,7 @@ class Product extends Equatable {
       isRecommended: false,
       isPopular: true,
       ),
-    Product(
+    const Product(
       name: "Soft Drink #1",
       category: 'Soft Drink',
       imageUrl: 'https://avatars.mds.yandex.net/i?id=e330f7491ebdc4918406e8c20079c532-5680887-images-thumbs&n=13&exp=1',
@@ -52,7 +52,7 @@ class Product extends Equatable {
       isRecommended: false,
       isPopular: true,
       ),
-    Product(
+    const Product(
       name: "Soft Drink #1",
       category: 'Soft Drink',
       imageUrl: 'https://avatars.mds.yandex.net/i?id=e330f7491ebdc4918406e8c20079c532-5680887-images-thumbs&n=13&exp=1',
