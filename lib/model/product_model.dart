@@ -45,7 +45,15 @@ class Product extends Equatable {
       isPopular: true,
       ),
     const Product(
-      name: "Soft Drink #1",
+      name: "Smoothies#2",
+      category: 'Soft Drink',
+      imageUrl: 'https://www.puremalt.com/hs-fs/hubfs/Website%20Resources/Media/Soft%20drinks%20and%20NA%20beverage/Assorted%20Soft%20Drinks%20-%20rendered.jpg?width=1920&name=Assorted%20Soft%20Drinks%20-%20rendered.jpg',
+      price: 2.98,
+      isRecommended: false,
+      isPopular: true,
+      ),
+    const Product(
+      name: "Soft Drink #3",
       category: 'Soft Drink',
       imageUrl: 'https://avatars.mds.yandex.net/i?id=e330f7491ebdc4918406e8c20079c532-5680887-images-thumbs&n=13&exp=1',
       price: 2.99,
@@ -53,7 +61,7 @@ class Product extends Equatable {
       isPopular: true,
       ),
     const Product(
-      name: "Soft Drink #1",
+      name: "Soft Drink #4",
       category: 'Soft Drink',
       imageUrl: 'https://avatars.mds.yandex.net/i?id=e330f7491ebdc4918406e8c20079c532-5680887-images-thumbs&n=13&exp=1',
       price: 2.99,

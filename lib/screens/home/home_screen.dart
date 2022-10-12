@@ -24,7 +24,6 @@ class HomeScreen extends StatelessWidget {
 
       // 2.CustomNavBar
       bottomNavigationBar: const CustomNavBar(),
-
       body: Column(
         children: [
           CarouselSlider(
@@ -40,12 +39,12 @@ class HomeScreen extends StatelessWidget {
                   ),
           // Product Card
           // ProductCard(product: Product.products[0],),
-          SectionTitle(title: "RECOMMENDED"),
+          const Expanded(child: SectionTitle(title: "RECOMMENDED")),
           ProductCarusel(
             products: Product.products
             .where((product) => product.isRecommended)
             .toList()),
-          SectionTitle(title: "MOST POPULAR"),
+          const Expanded(child: SectionTitle(title: "MOST POPULAR")),
           ProductCarusel(
             products: Product.products
             .where((product) => product.isPopular)
