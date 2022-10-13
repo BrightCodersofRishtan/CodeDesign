@@ -2,19 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:storeapp/model/models.dart';
 
 class HeroCaruselCard extends StatelessWidget {
-  final Category category;
+  final Category? category;
+  final Product? product;
 
-  const HeroCaruselCard({required this.category, super.key});
+  const HeroCaruselCard({
+    this.category, 
+    this.product,
+    super.key});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(
+        if(this.product==null){
+          Navigator.pushNamed(
           context,
           '/catalog',
           arguments: category,
         );
+        }
+        
       },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 20.0),
@@ -22,7 +29,10 @@ class HeroCaruselCard extends StatelessWidget {
           borderRadius: const BorderRadius.all(Radius.circular(5.0)),
           child: Stack(
             children: <Widget>[
-              Image.network(category.imageUrl,
+              Image.network(
+                product==null?
+                category!.imageUrl
+                :product!.imageUrl,
                   fit: BoxFit.cover, width: 1000.0),
               Positioned(
                 bottom: 0.0,
@@ -42,11 +52,14 @@ class HeroCaruselCard extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(
                       vertical: 10.0, horizontal: 20.0),
                   child: Text(
-                    category.name,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline2!
-                        .copyWith(color: Colors.white),
+                    product==null?
+                category!.name
+                :'',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
