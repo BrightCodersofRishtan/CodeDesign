@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:storeapp/model/category_model.dart';
 import 'package:storeapp/model/models.dart';
 import 'package:storeapp/screens/screens.dart';
 
@@ -27,7 +26,7 @@ class AppRouter {
 
   static Route _errorRoute() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: '/error'),
+      settings: const RouteSettings(name: '/error'),
       builder: (_) => Scaffold(
         appBar: AppBar(
           title: const Text('ERROR'),
